@@ -1,9 +1,12 @@
- 
-function PokemonCard({pokemon}) {
+type pokemonProps = {
+    name: string;
+    imgSrc?: string; 
+}
 
+function PokemonCard({name, imgSrc} : pokemonProps) {
     return <>
-        {pokemon.name}<br></br>
-        {pokemon.imgSrc === undefined ? <p>???</p> : <img src={pokemon.imgSrc}/>}         
+        {name}<br></br>
+        {imgSrc === undefined ? <p>???</p> : <img src={imgSrc}/>}
         </>;
   }
   
